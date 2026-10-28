@@ -1,4 +1,5 @@
 {
+  "name": "DIO-PRA",
   "nodes": [
     {
       "parameters": {
@@ -28,7 +29,7 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.5,
       "position": [
-        1808,
+        1664,
         0
       ],
       "id": "a6d2bf12-2f6c-4c51-9392-1da4d99e5449",
@@ -123,8 +124,8 @@
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 2.3,
       "position": [
-        768,
-        16
+        704,
+        208
       ],
       "id": "cedebb35-f14b-45d2-91da-dfa75130b415",
       "name": "Message a model",
@@ -133,7 +134,8 @@
           "id": "MKqgZLS2ZomPfvfP",
           "name": "OpenAi Ricardo"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -142,11 +144,12 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1136,
-        16
+        1040,
+        208
       ],
       "id": "08024591-6d64-475e-938a-90469161cffc",
-      "name": "Code in JavaScript2"
+      "name": "Code in JavaScript2",
+      "disabled": true
     },
     {
       "parameters": {
@@ -175,7 +178,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.4,
       "position": [
-        1360,
+        1216,
         16
       ],
       "id": "755ba7f2-6d6b-4c19-86ba-c04dddb283c1",
@@ -191,7 +194,7 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1568,
+        1424,
         0
       ],
       "id": "49f616ca-f916-481e-86fa-865e0ac4f73b",
@@ -205,6 +208,7 @@
       }
     }
   ],
+  "pinData": {},
   "connections": {
     "Webhook": {
       "main": [
@@ -275,7 +279,7 @@
       "main": [
         [
           {
-            "node": "Message a model",
+            "node": "If",
             "type": "main",
             "index": 0
           }
@@ -295,13 +299,7 @@
     },
     "Code in JavaScript2": {
       "main": [
-        [
-          {
-            "node": "If",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "If": {
@@ -327,9 +325,17 @@
       ]
     }
   },
-  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "d68b33e8-b40e-4a0f-b018-76bbd79bce0b",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "e2e400441824b6db24f6af0c9b70e2d924e9d21f9a10e30b8b4be3b81da7dbb1"
-  }
+  },
+  "nodeGroups": [],
+  "id": "0f0bHfP7tzsuP9ly",
+  "tags": []
 }
